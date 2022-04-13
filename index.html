@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Portfolio</title>
+</head>
+<style>
+    #logo {
+        border-radius: 50%;
+    }
+    
+    #profil {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    
+    .jumbotron {
+        background-color:white;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-top: 78px;
+    }
+    
+    .jumbotron h4 {
+        color: black;
+        font-family: serif;
+        margin: 11px;
+    }
+    
+    .button {
+        background-color: white;
+        border: 1px solid gray;
+        color: black;
+        padding: 10px 20px;
+        border-radius: 0.25em;
+        margin-left: 5px;
+        margin-right: 5px;
+        transition: color 2s, background 2s;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .button:hover {
+        text-decoration: none;
+        background-color: black;
+        color: white;
+    }
+    
+    .item {
+        padding-bottom: 10px;
+        position: relative;
+        bottom: 5px;
+    }
+    
+    .item img {
+        margin: 0 3px;
+    }
+    
+    .list {
+        padding-top: 10px;
+    }
+    /* responsive */
+    
+    @media (max-width:600px) {
+        .button {
+            display: none;
+        }
+        /* .jumbotron {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -10px;
+        } */
+    }
+    @media(min-width: 900px){
+        .navbar-nav{
+            display:none;
+        }
+        
+    }
+    #pengalaman img{
+       width:370px;
+       height:300px;
+    }
+    small{
+        font-size:18px;
+    }
+    table{
+        margin:10px auto;
+    }
+    .container label{
+        color: rgb(56, 103, 233)
+    }
+    h1{
+        color:rgb(37, 91, 240);
+        font-weight: bold;
+        font-family: serif;
+    }
+    .card{
+        margin:20px auto;
+    }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="logo2.jpg" style="width:40px;" id="logo">
+        </a>
+        <a class="navbar-brand" href="#">Rahmad Qolbi Syahrani</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+            <ul class="navbar-nav  ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="stokbarang/stok_barang.php">Tentang Saya</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kemampuan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pengalaman</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Project</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="text-center">
+            <img src="q.jpg" id="profil" data-aos="fade-down-right">
+            <h4 data-aos="fade-down-right" data-aos-duration="1000">Rahmad Qolbi Syahrani</h4>
+            <div class="item">
+                <a href="#"><img src="https://img.icons8.com/small/24/000000/github.png" data-aos="fade-up" data-aos-duration="1500" /></a>
+                <a href="#"><img src="https://img.icons8.com/small/24/000000/instagram-new.png" data-aos="fade-up" data-aos-duration="2000" /></a>
+                <a href="#"><img src="https://img.icons8.com/small/24/000000/whatsapp.png" data-aos="fade-up" data-aos-duration="2500" /></a>
+                <a href="#"><img src="https://img.icons8.com/small/24/000000/youtube-play.png" data-aos="fade-up" data-aos-duration="3000" /></a>
+
+            </div>
+            
+        </div>
+    </div>
+    <!-- tentang saya -->
+    <div class="row text-center mb-3" >
+        <div class="col-sm-12 col-md-12 col-xl-12">
+            <h1 class= "text-center" id="tentang">Tentang Saya</h1>
+            
+        </div>
+    </div>
+    <div class="container">
+    <div class="row text-center mb-4">
+            <div class="col-6 col-xl-6">
+            <div class="judul">
+                <label><b>Nama Lengkap</b></label><br>
+                <label><b>Tanggal Lahir</b></label><br>
+                <label><b>Nomor Telepon</b></label><br>
+                <label><b>Alamat</b></label>
+            </div>
+              
+           
+            </div>
+            <div class="col-6 col-xl-6">
+                <label>Rahmad Qalbi Syahrani</label><br>
+                <label>15 Desember 2002</label><br>
+              
+                <label>+62 813-6006-3657</label><br>
+                <label>Medan, Marelan</label>
+
+               
+            </div>
+    </div>
+
+    <h1 class="text-center" id="kemampuan">Kemampuan</h1>
+        <div class="row text-center mb-3">
+            <div class="col-6 col-md-4 col-xl-3 mt-5">
+                <img src="https://img.icons8.com/ios/50/000000/html.png"/ >
+                <p>HTML</p>
+            </div>
+            <div class="col-6 col-md-4 col-xl-3 mt-5">
+                <img src="https://img.icons8.com/ios/50/000000/css.png"/>
+                <p>CSS</p>
+            </div>
+            <div class="col-6 col-md-4 col-xl-3 mt-5">
+                <img src="https://img.icons8.com/ios/50/000000/javascript--v1.png"/>
+                <p>JAVASCRIPT</p>
+            </div>
+            <div class="col-6 col-md-4 col-xl-3 mt-5">
+                <img src="https://img.icons8.com/ios/50/000000/php.png"/>
+                <p>PHP</p>
+            </div>
+            <div class="col-6 col-md-4 col-xl-3 mt-5">
+                <img src="https://img.icons8.com/windows/50/000000/bootstrap.png"/>
+                <p>BOOTSTRAP</p>
+            </div>
+            <div class="col-6 col-md-4 col-xl-3 mt-5">
+                <img src="https://img.icons8.com/cute-clipart/50/000000/microsoft-word-2019.png"/>
+                <p>Microsoft Word</p>
+            </div>
+            <div class="col-12 col-md-4 col-xl-3 mt-5">
+                <img src="https://img.icons8.com/fluency/50/000000/microsoft-excel-2019.png"/>
+                <p>Microsoft Excel</p>
+            </div>
+        </div>
+    <!-- kemampuan -->
+
+    <!-- pengalaman -->
+    <h1 class="text-center">Pengalaman kerja</h1>
+
+    <div class="container" id="pengalaman">
+      <div class="row text-center">
+          <div class="col-12 col-md-6 col-xl-6">
+              <img src="admin.jpg">
+          </div>
+          <div class="col-12 col-md-6 col-xl-6 ">
+              <h3  class="mt-4">Admin Komputer Server Pulsa<br><small>MARET 2021 - SEKARANG</small></h3> 
+           <ul class="text-justify">
+                <li>Bertanggung jawab penuh memantau dan mengecek transaksi pulsa yang dilakukan oleh member/agen. </li>
+                <li>Meningkatkan kualitas transaksi agar aman serta menguntungkan perusahaan</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    
+<!-- project -->
+
+    <h1 class="text-center">Portfolio</h1>
+    <div class="row text-center">
+        <div class="col-12 col-md-6 col-xl-6">
+        <div class="card" style="width: 18rem;">
+            <img src="p1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Company Profile</h5>
+              <p class="card-text">Website dibuat menggunakan bahasa pemrograman HTML, CSS, JAVASCRIPT dan JQUERY</p>
+            
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-6">
+            <div class="card" style="width: 18rem;">
+                <img src="p2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Aplikasi Penjualan</h5>
+                  <p class="card-text">Aplikasi berbasis php dibuat menggunakan bahasa pemrograman HTML, CSS, JAVASCRIPT dan PHP</p>
+               
+                </div>
+              </div>
+            </div>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
