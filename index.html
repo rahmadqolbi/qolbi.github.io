@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <title>Portfolio</title>
 </head>
 <style>
+  
     #logo {
         border-radius: 50%;
     }
@@ -23,7 +25,7 @@
     }
     
     .jumbotron {
-        background-color:white;
+        background-image: url(bgkeren2.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -36,24 +38,9 @@
         margin: 11px;
     }
     
-    .button {
-        background-color: white;
-        border: 1px solid gray;
-        color: black;
-        padding: 10px 20px;
-        border-radius: 0.25em;
-        margin-left: 5px;
-        margin-right: 5px;
-        transition: color 2s, background 2s;
-        position: relative;
-        overflow: hidden;
-    }
+ 
     
-    .button:hover {
-        text-decoration: none;
-        background-color: black;
-        color: white;
-    }
+   
     
     .item {
         padding-bottom: 10px;
@@ -70,54 +57,104 @@
     }
     /* responsive */
     
-    @media (max-width:600px) {
-        .button {
+   
+    
+    @media(min-width: 900px) {
+        .navbar-nav {
             display: none;
         }
-        /* .jumbotron {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: -10px;
-        } */
-    }
-    @media(min-width: 900px){
-        .navbar-nav{
-            display:none;
+        #tentang blockquote{
+            width:60%;
+            margin:20px auto;
         }
-        
     }
-    #pengalaman img{
-       width:370px;
-       height:300px;
+    
+    #pengalaman img {
+        width: 200px;
+        height: 200px;
     }
-    small{
-        font-size:18px;
+    
+    #pengalaman p {
+        margin-left: 3px;
     }
-    table{
-        margin:10px auto;
+    
+    small {
+        font-size: 18px;
     }
-    .container label{
+    
+    table {
+        margin: 10px auto;
+    }
+    
+    .container label {
         color: rgb(56, 103, 233)
     }
-    h1{
-        color:rgb(37, 91, 240);
+    
+    h1 {
+        color: rgb(37, 91, 240);
         font-weight: bold;
         font-family: serif;
     }
-    .card{
-        margin:20px auto;
+    
+    .card {
+        margin: 20px auto;
+    }
+    #tentang {
+        padding:14px;
+    }
+    #footer ul li{
+        list-style: none;
+    }
+    #sosmed li{
+        display:inline;
+      
+    }
+
+    .btn-floating{
+        position: fixed;
+        right: 25px;
+        overflow: hodden;
+        width: 50px;
+        height: 50px;
+        border-radius:100px;
+        border:0;
+        z-index:999;
+        transition: .2s;
+    }
+    .btn-floating:hover{
+        width:auto;
+        padding: 0 23px;
+        cursor: pointer;
+    }
+    .btn-floating span{
+        font-size: 16px;
+        margin-left: 5px;
+        transition: .2s;
+        line-height: 0;
+        display: none;
+        position: relative;
+        top:2px;
+    }
+    .btn-floating:hover span{
+        display: inline-block;
+    }
+    .btn-floating:hover img{
+        margin-bottom:-3px
+    }
+    .btn-floating.whatsapp{
+        bottom: 25px;
+        background-color: #ddd;
+        border: 2px solid #fff;
     }
 </style>
 
 <body>
 
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <a class="navbar-brand" href="#">
             <img src="logo2.jpg" style="width:40px;" id="logo">
         </a>
-        <a class="navbar-brand" href="#">Rahmad Qolbi Syahrani</a>
+        <a class="navbar-brand mr-auto" href="#">Rahmad Qolbi Syahrani</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -125,7 +162,7 @@
 
             <ul class="navbar-nav  ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="stokbarang/stok_barang.php">Tentang Saya</a>
+                    <a class="nav-link" href="#">Tentang Saya</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Kemampuan</a>
@@ -134,7 +171,7 @@
                     <a class="nav-link" href="#">Pengalaman</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Project</a>
+                    <a class="nav-link" href="#">Portfolio</a>
                 </li>
 
 
@@ -153,131 +190,139 @@
                 <a href="#"><img src="https://img.icons8.com/small/24/000000/youtube-play.png" data-aos="fade-up" data-aos-duration="3000" /></a>
 
             </div>
-            
+
         </div>
     </div>
+    <a href="https://wa.me/message/S3VPADK3GEQIP1">
+        <button class="btn-floating whatsapp">
+            <img src="https://img.icons8.com/office/32/000000/whatsapp--v1.png">
+            <span>Hubungi Qolbi</span>
+        </button>
+    </a>
+
+
     <!-- tentang saya -->
-    <div class="row text-center mb-3" >
+    <div class="row text-center mt-5" id="tentang">
         <div class="col-sm-12 col-md-12 col-xl-12">
-            <h1 class= "text-center" id="tentang">Tentang Saya</h1>
-            
+            <h1 class="text-center">Tentang Saya</h1>
+          <blockquote class="mt-4"> 
+<i>Saya telah menghabiskan dua tahun terakhir mengembangkan keterampilan saya sebagai programmer  di bidang teknologi.
+ hal yang saya sukai dari pekerjaan ini adalah meningkatnya rasa ingin tahu saya dalam menyelesaikan masalah. Selain itu saya juga seorang freelancer</i>
+</blockquote>
         </div>
     </div>
-    <div class="container">
-    <div class="row text-center mb-4">
-            <div class="col-6 col-xl-6">
-            <div class="judul">
-                <label><b>Nama Lengkap</b></label><br>
-                <label><b>Tanggal Lahir</b></label><br>
-                <label><b>Nomor Telepon</b></label><br>
-                <label><b>Alamat</b></label>
-            </div>
-              
-           
-            </div>
-            <div class="col-6 col-xl-6">
-                <label>Rahmad Qalbi Syahrani</label><br>
-                <label>15 Desember 2002</label><br>
-              
-                <label>+62 813-6006-3657</label><br>
-                <label>Medan, Marelan</label>
 
-               
-            </div>
-    </div>
-
-    <h1 class="text-center" id="kemampuan">Kemampuan</h1>
-        <div class="row text-center mb-3">
-            <div class="col-6 col-md-4 col-xl-3 mt-5">
-                <img src="https://img.icons8.com/ios/50/000000/html.png"/ >
+    <div>
+        <h1 class="text-center mt-5">Kemampuan</h1>
+        <div class="row text-center mt-5" id="kemampuan" >
+            <div class="col-6 col-sm-4 col-lg-4 col-xl-3 mt-5">
+                <img src="https://img.icons8.com/ios/50/000000/html.png" / data-aos="zoom-in-down" data-aos-easing="linear" data-aos-duration="500">
                 <p>HTML</p>
             </div>
-            <div class="col-6 col-md-4 col-xl-3 mt-5">
-                <img src="https://img.icons8.com/ios/50/000000/css.png"/>
+            <div class="col-6 col-sm-4 col-lg-4 col-xl-3 mt-5">
+                <img src="https://img.icons8.com/ios/50/000000/css.png" / data-aos="zoom-in-down" data-aos-easing="linear" data-aos-duration="1000">
                 <p>CSS</p>
             </div>
-            <div class="col-6 col-md-4 col-xl-3 mt-5">
-                <img src="https://img.icons8.com/ios/50/000000/javascript--v1.png"/>
+            <div class="col-6 col-sm-4 col-lg-4 col-xl-3 mt-5">
+                <img src="https://img.icons8.com/ios/50/000000/javascript--v1.png" / data-aos="zoom-in-down" data-aos-easing="linear" data-aos-duration="1500">
                 <p>JAVASCRIPT</p>
             </div>
-            <div class="col-6 col-md-4 col-xl-3 mt-5">
-                <img src="https://img.icons8.com/ios/50/000000/php.png"/>
+            <div class="col-6 col-sm-4 col-lg-4 col-xl-3 mt-5">
+                <img src="https://img.icons8.com/ios/50/000000/php.png" / data-aos="zoom-in-down" data-aos-easing="linear" data-aos-duration="2000">
                 <p>PHP</p>
             </div>
-            <div class="col-6 col-md-4 col-xl-3 mt-5">
-                <img src="https://img.icons8.com/windows/50/000000/bootstrap.png"/>
+            <div class="col-6 col-sm-4 col-lg-4 col-xl-3 mt-5">
+                <img src="https://img.icons8.com/windows/50/000000/bootstrap.png" / data-aos="zoom-in-down" data-aos-easing="linear" data-aos-duration="2300">
                 <p>BOOTSTRAP</p>
             </div>
-            <div class="col-6 col-md-4 col-xl-3 mt-5">
-                <img src="https://img.icons8.com/cute-clipart/50/000000/microsoft-word-2019.png"/>
+            <div class="col-6 col-sm-4 col-lg-4 col-xl-3 mt-5">
+                <img src="https://img.icons8.com/cute-clipart/50/000000/microsoft-word-2019.png" / data-aos="zoom-in-down" data-aos-easing="linear" data-aos-duration="2700">
                 <p>Microsoft Word</p>
             </div>
-            <div class="col-12 col-md-4 col-xl-3 mt-5">
-                <img src="https://img.icons8.com/fluency/50/000000/microsoft-excel-2019.png"/>
+            <div class="col-12 col-sm-4 col-lg-4 col-xl-3 mt-5">
+                <img src="https://img.icons8.com/fluency/50/000000/microsoft-excel-2019.png" / data-aos="zoom-in-down"  data-aos-easing="linear"data-aos-duration="3000">
                 <p>Microsoft Excel</p>
             </div>
         </div>
+    
+    </div>
+    
+
     <!-- kemampuan -->
 
     <!-- pengalaman -->
-    <h1 class="text-center">Pengalaman kerja</h1>
+    <div class="mt-5">
+        <h1 class="text-center mt-5" >Pengalaman kerja</h1>
 
-    <div class="container" id="pengalaman">
-      <div class="row text-center">
-          <div class="col-12 col-md-6 col-xl-6">
-              <img src="admin.jpg">
-          </div>
-          <div class="col-12 col-md-6 col-xl-6 ">
-              <h3  class="mt-4">Admin Komputer Server Pulsa<br><small>MARET 2021 - SEKARANG</small></h3> 
-           <ul class="text-justify">
-                <li>Bertanggung jawab penuh memantau dan mengecek transaksi pulsa yang dilakukan oleh member/agen. </li>
-                <li>Meningkatkan kualitas transaksi agar aman serta menguntungkan perusahaan</li>
-            </ul>
+        <div class="row text-center mt-5" id="pengalaman">
+            <div class="col-sm-12 col-md-6 col-xl-6">
+                <img src="admin.jpg">
+            </div>
+            <div class="col-sm-12 col-md-6 col-xl-6">
+                <h3 class="mt-4">Admin Komputer Server Pulsa<br><small>CV. KARYA PULSA MARET 2021 - SEKARANG</small></h3>
+                
+                    <!-- <p>- Bertanggung jawab penuh memantau dan mengecek transaksi pulsa yang dilakukan oleh member/agen<br>-Meningkatkan kuaptas transaksi agar aman serta menguntungkan perusahaan </p> -->  
+            </div>
         </div>
-      </div>
+    
+    
     </div>
     
-<!-- project -->
 
-    <h1 class="text-center">Portfolio</h1>
-    <div class="row text-center">
-        <div class="col-12 col-md-6 col-xl-6">
-        <div class="card" style="width: 18rem;">
-            <img src="p1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Company Profile</h5>
-              <p class="card-text">Website dibuat menggunakan bahasa pemrograman HTML, CSS, JAVASCRIPT dan JQUERY</p>
-            
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-xl-6">
-            <div class="card" style="width: 18rem;">
-                <img src="p2.jpg" class="card-img-top" alt="...">
+    <!-- project -->
+<div class="mt-5">
+    <h1 class="text-center mt-5">Portfolio</h1>
+    <div class="row text-center mt-5">
+        <div class="col-sm-6 col-md-6 col-xl-6">
+            <div class="card" style="width: 18rem;" >
+                <img src="p1.jpg" class="card-img-top" data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="3000">
                 <div class="card-body">
-                  <h5 class="card-title">Aplikasi Penjualan</h5>
-                  <p class="card-text">Aplikasi berbasis php dibuat menggunakan bahasa pemrograman HTML, CSS, JAVASCRIPT dan PHP</p>
-               
+                    <h5 class="card-title">Company Profile</h5>
+                    <p class="card-text">Website dibuat menggunakan bahasa pemrograman HTML, CSS, JAVASCRIPT dan JQUERY</p>
+
                 </div>
-              </div>
             </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-xl-6">
+            <div class="card" style="width: 18rem;">
+                <img src="p2.jpg" class="card-img-top"data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="3000">
+                <div class="card-body">
+                    <h5 class="card-title">Aplikasi Penjualan</h5>
+                    <p class="card-text">Aplikasi berbasis php dibuat menggunakan bahasa pemrograman HTML, CSS, JAVASCRIPT dan PHP</p>
+
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- footer -->
+<div class="row bg-dark text-light" id="footer">
+    <div class="col-sm-12 col-md-6 ">
+        <h2 class="ml-3">Hubungi Saya</h2>
+        <ul class="p-3">
+            <li><i class="bi bi-telephone mr-2" ></i>0813-6006-3657</li>
+            <li><i class="bi bi-envelope-open mr-2"></i>rahmadqolbi123@gmail.com</li>
+            <li><i class="bi bi-geo-alt mr-2"></i>Jln. Medan Marelan Pasar 2 Barat</li>
+            <li><i class="bi bi-pin-map mr-2"></i>20255</li>
+        </ul>
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <ul class="mt-1"id="sosmed">
+            <li><img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/44/000000/external-email-advertising-kiranshastry-lineal-color-kiranshastry-7.png"/></li>
+            <li><img src="https://img.icons8.com/stickers/34/000000/instagram-new--v2.png"/></li>
+            <li><img src="https://img.icons8.com/office/34/000000/whatsapp--v1.png"/></li>
+            <li><img src="https://img.icons8.com/office/34/000000/youtube-play.png"/></li>  
+        </ul>
+        
+    </div>
+   
+</div>
+   
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
