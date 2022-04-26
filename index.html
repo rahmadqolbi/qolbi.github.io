@@ -1,337 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <title>Portfolio</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Undangan Nikah</title>
 <style>
-  
-    #logo {
-        border-radius: 50%;
+    *{
+        margin:0;
+        padding:0;
     }
     
-    #profil {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-    }
-    
-    .jumbotron {
-        background-image: url(bgkeren2.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        padding-top: 78px;
-    }
-    
-    .jumbotron h4 {
-        color: black;
-        font-family: serif;
-        margin: 11px;
-    }
-    
- 
-    
-   
-    
-    .item {
-        padding-bottom: 10px;
-        position: relative;
-        bottom: 5px;
-    }
-    
-    .item img {
-        margin: 0 3px;
-    }
-    
-    .list {
-        padding-top: 10px;
-    }
-    /* responsive */
-    
-   
-    
-    @media(min-width: 900px) {
-        .navbar-nav {
-            display: none;
-        }
-        #tentang blockquote{
-            width:60%;
-            margin:20px auto;
-        }
-    }
-    
-    #pengalaman img {
-        width: 200px;
-        height: 200px;
-    }
-    
-    #pengalaman p {
-        margin-left: 3px;
-    }
-    
-    small {
-        font-size: 18px;
-    }
-    
-    table {
-        margin: 10px auto;
-    }
-    
-    .container label {
-        color: rgb(56, 103, 233)
-    }
-    
-    h1 {
-        color: rgb(37, 91, 240);
-        font-weight: bold;
-        font-family: serif;
-    }
-    
-    .card {
-        margin: 20px auto;
-    }
-    #tentang {
-        padding:14px;
-    }
-    #footer ul li{
-        list-style: none;
-    }
-    #sosmed li{
-        display:inline;
-      
-    }
+   .row .pengantin{
+       float: left;
+       width:100%;
+       height:100vh;
+     
+   }
+   header h1{
+       font-family: serif;
+   }
+   span{
+       padding:5px;
+   }
+  @media (max-width:600px){
+      .row .pengantin{
+          width:100%;
+          height:100vh;
 
-    .btn-floating{
-        position: fixed;
-        right: 25px;
-        overflow: hodden;
-        width: 50px;
-        height: 50px;
-        border-radius:100px;
-        border:0;
-        z-index:999;
-        transition: .2s;
+      }
+
+
+      #sc{
+          overflow: auto;
+      }
+     
+  }
+
+  .calon img{
+      width:200px;
+      height:200px;
+      border-radius: 50%;
+      border: 3px solid rgb(243, 97, 97);
+  }
+  @media (min-width:768px){
+    #sc{
+      height:100vh;
+      overflow: scroll;
+  }
+  }
+  .calon h1{
+      font-family: serif;
+  }
+  .akad h1{
+      font-family: serif;
+  }
+  .moment h1{
+      font-family: serif;
+  }
+  .quotes{
+      border: 2px solid gray;
+      padding:7px;
+      background-color: #ddd;
+      width:300px;
+      margin:10px auto;
+      border-radius: 1rem;
+  }
+  footer ul li{
+        list-style: none;
+       
     }
-    .btn-floating:hover{
-        width:auto;
-        padding: 0 23px;
+    footer ul li{
+        list-style: none;
+        display: inline;
         cursor: pointer;
     }
-    .btn-floating span{
-        font-size: 16px;
-        margin-left: 5px;
-        transition: .2s;
-        line-height: 0;
-        display: none;
-        position: relative;
-        top:2px;
+    footer a{
+        color: #333;
     }
-    .btn-floating:hover span{
-        display: inline-block;
-    }
-    .btn-floating:hover img{
-        margin-bottom:-3px
-    }
-    .btn-floating.whatsapp{
-        bottom: 25px;
-        background-color: #ddd;
-        border: 2px solid #fff;
+    footer a:hover{
+        text-decoration: none;
+        
     }
 </style>
-
+</head>
 <body>
-
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark  navbar-default navbar-fixed-bottom">
+        <!-- <a class="navbar-brand" href="#">
             <img src="logo2.jpg" style="width:40px;" id="logo">
-        </a>
-        <a class="navbar-brand mr-auto" href="#">Rahmad Qolbi Syahrani</a>
+        </a> -->
+        <a class="navbar-brand mr-auto" href="#">Adrian & Putri</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-
-            <ul class="navbar-nav  ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tentang Saya</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Kemampuan</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pengalaman</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
-                </li>
-
-
-            </ul>
-        </div>
     </nav>
 
-    <div class="jumbotron">
-        <div class="text-center">
-            <img src="q.jpg" id="profil" data-aos="fade-down-right">
-            <h4 data-aos="fade-down-right" data-aos-duration="1000">Rahmad Qolbi Syahrani</h4>
-            <div class="item">
-                <a href="#"><img src="https://img.icons8.com/small/24/000000/github.png" data-aos="fade-up" data-aos-duration="1500" /></a>
-                <a href="#"><img src="https://img.icons8.com/small/24/000000/instagram-new.png" data-aos="fade-up" data-aos-duration="2000" /></a>
-                <a href="#"><img src="https://img.icons8.com/small/24/000000/whatsapp.png" data-aos="fade-up" data-aos-duration="2500" /></a>
-                <a href="#"><img src="https://img.icons8.com/small/24/000000/youtube-play.png" data-aos="fade-up" data-aos-duration="3000" /></a>
-
+ 
+        <div class="row">
+            <div class="col-lg-6 col-xl-5">
+                <img src="pengantin.jpg" class="pengantin">
             </div>
-
-        </div>
-    </div>
-    <a href="https://wa.me/message/S3VPADK3GEQIP1">
-        <button class="btn-floating whatsapp">
-            <img src="https://img.icons8.com/office/32/000000/whatsapp--v1.png">
-            <span>Hubungi Qolbi</span>
-        </button>
-    </a>
-
-
-    <!-- tentang saya -->
-    <div class="row text-center mt-5" id="tentang">
-        <div class="col-sm-12 col-md-12 col-xl-12">
-            <h1 class="text-center">Tentang Saya</h1>
-          <blockquote class="mt-4"> 
-<i>Saya telah menghabiskan dua tahun terakhir mengembangkan keterampilan saya sebagai programmer  di bidang teknologi.
- hal yang saya sukai dari pekerjaan ini adalah meningkatnya rasa ingin tahu saya dalam menyelesaikan masalah. Selain itu saya juga seorang freelancer</i>
-</blockquote>
-        </div>
-    </div>
-
-    <div>
-        <h1 class="text-center mt-5">Kemampuan</h1>
-        <div class="row text-center mt-5" id="kemampuan" >
-            <div class="col-6 col-sm-4 col-lg-4 col-xl-3 mt-5">
-                <img src="https://img.icons8.com/ios/50/000000/html.png" / data-aos="zoom-in-down" data-aos-easing="linear" data-aos-duration="500">
-                <p>HTML</p>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-4 col-xl-3 mt-5">
-                <img src="https://img.icons8.com/ios/50/000000/css.png" / data-aos="zoom-in-down" data-aos-easing="linear" data-aos-duration="1000">
-                <p>CSS</p>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-4 col-xl-3 mt-5">
-                <img src="https://img.icons8.com/ios/50/000000/javascript--v1.png" / data-aos="zoom-in-down" data-aos-easing="linear" data-aos-duration="1500">
-                <p>JAVASCRIPT</p>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-4 col-xl-3 mt-5">
-                <img src="https://img.icons8.com/ios/50/000000/php.png" / data-aos="zoom-in-down" data-aos-easing="linear" data-aos-duration="2000">
-                <p>PHP</p>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-4 col-xl-3 mt-5">
-                <img src="https://img.icons8.com/windows/50/000000/bootstrap.png" / data-aos="zoom-in-down" data-aos-easing="linear" data-aos-duration="2300">
-                <p>BOOTSTRAP</p>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-4 col-xl-3 mt-5">
-                <img src="https://img.icons8.com/cute-clipart/50/000000/microsoft-word-2019.png" / data-aos="zoom-in-down" data-aos-easing="linear" data-aos-duration="2700">
-                <p>Microsoft Word</p>
-            </div>
-            <div class="col-12 col-sm-4 col-lg-4 col-xl-3 mt-5">
-                <img src="https://img.icons8.com/fluency/50/000000/microsoft-excel-2019.png" / data-aos="zoom-in-down"  data-aos-easing="linear"data-aos-duration="3000">
-                <p>Microsoft Excel</p>
-            </div>
-        </div>
-    
-    </div>
-    
-
-    <!-- kemampuan -->
-
-    <!-- pengalaman -->
-    <div class="mt-5">
-        <h1 class="text-center mt-5" >Pengalaman kerja</h1>
-
-        <div class="row text-center mt-5" id="pengalaman">
-            <div class="col-sm-12 col-md-6 col-xl-6">
-                <img src="admin.jpg">
-            </div>
-            <div class="col-sm-12 col-md-6 col-xl-6">
-                <h3 class="mt-4">Admin Komputer Server Pulsa<br><small>CV. KARYA PULSA MARET 2021 - SEKARANG</small></h3>
-                
-                    <!-- <p>- Bertanggung jawab penuh memantau dan mengecek transaksi pulsa yang dilakukan oleh member/agen<br>-Meningkatkan kuaptas transaksi agar aman serta menguntungkan perusahaan </p> -->  
-            </div>
-        </div>
-    
-    
-    </div>
-    
-
-    <!-- project -->
-<div class="mt-5">
-    <h1 class="text-center mt-5">Portfolio</h1>
-    <div class="row text-center mt-5">
-        <div class="col-sm-6 col-md-6 col-xl-6">
-            <div class="card" style="width: 18rem;" >
-                <img src="p1.jpg" class="card-img-top" data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="3000">
-                <div class="card-body">
-                    <h5 class="card-title">Company Profile</h5>
-                    <p class="card-text">Website dibuat menggunakan bahasa pemrograman HTML, CSS, JAVASCRIPT dan JQUERY</p>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-xl-6">
-            <div class="card" style="width: 18rem;">
-                <img src="p2.jpg" class="card-img-top"data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="3000">
-                <div class="card-body">
-                    <h5 class="card-title">Aplikasi Penjualan</h5>
-                    <p class="card-text">Aplikasi berbasis php dibuat menggunakan bahasa pemrograman HTML, CSS, JAVASCRIPT dan PHP</p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- footer -->
-<div class="row bg-dark text-light" id="footer">
-    <div class="col-sm-12 col-md-6 ">
-        <h2 class="ml-3">Hubungi Saya</h2>
-        <ul class="p-3">
-            <li><i class="bi bi-telephone mr-2" ></i>0813-6006-3657</li>
-            <li><i class="bi bi-envelope-open mr-2"></i>rahmadqolbi123@gmail.com</li>
-            <li><i class="bi bi-geo-alt mr-2"></i>Jln. Medan Marelan Pasar 2 Barat</li>
-            <li><i class="bi bi-pin-map mr-2"></i>20255</li>
-        </ul>
-    </div>
-    <div class="col-sm-12 col-md-6">
-        <ul class="mt-1"id="sosmed">
-            <li><img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/44/000000/external-email-advertising-kiranshastry-lineal-color-kiranshastry-7.png"/></li>
-            <li><img src="https://img.icons8.com/stickers/34/000000/instagram-new--v2.png"/></li>
-            <li><img src="https://img.icons8.com/office/34/000000/whatsapp--v1.png"/></li>
-            <li><img src="https://img.icons8.com/office/34/000000/youtube-play.png"/></li>  
-        </ul>
+            <div class="col-lg-6 col-xl-7" id="sc">
+                <h1 class="text-center p-3" data-aos="fade-right">Undangan Pernikahan</h1>
+                <h2 class="text-center" data-aos="fade-up-right" data-aos-duration="1500">Adrian & Putri</h2>
+                <p class="text-center " data-aos="fade-up-left" data-aos-duration="1500"><span><img src="https://img.icons8.com/office/27/000000/filled-like--v1.png"/></span>Minggu, 24 April 2022<span><img src="https://img.icons8.com/office/27/000000/filled-like--v1.png"/></span></p>
         
-    </div>
-   
-</div>
-   
+                <div class="text-center mt-5 ayat">
+                    <p>وَمِنْ كُلِّ شَيْءٍ خَلَقْنَا زَوْجَيْنِ لَعَلَّكُمْ تَذَكَّرُوْنَ</p>
+                    <i>Dan segala sesuatu Kami ciptakan berpasang-pasangan agar kamu mengingat (kebesaran Allah).
+                        Q.S Adz- Dzariat ayat 49</i>
+                </div>
+        
+                <div class="calon text-center">
+                    <h1 class="text-center mt-4" ><b>Calon Pria</b></h1>
+                    <img src="laki.jpg">
+                    <h1 class="text-center mt-2">Adrian S.kom, M.Kom</h1>
+                    <p>Putra dari Bapak DR. Rahmat Hidayat ST & Ibu Melina</p>
+                    <h1 class="text-center"><b>&</b></h1>
+                </div>
+                <div class="calon text-center mt-3">
+                    <h1 class="text-center mt-4"><b>Calon Wanita</b></h1>
+                    <img src="wanita.jpg" >
+                    <h1 class="text-center mt-2">Putri</h1>
+                    <p>Putra dari Bapak Hasyim bishr & Ibu Rindi</p>
+                </div>
+                <div class="akad text-center">
+                    <h1>Akad Nikah</h1>
+                    <small>Insyaa Allah akan dilaksanakan</small>
+                    <p class="text-center "><span><img src="https://img.icons8.com/office/27/000000/filled-like--v1.png"/></span>Minggu, 24 April 2022<span><img src="https://img.icons8.com/office/27/000000/filled-like--v1.png"/></span><br>Jalan Medan Marelan pasar 2 barat  samping gedung Cimb<br>Pukul 10:00 s/d</p>
+                </div>
+                <div class="moment text-center">
+                    <h1 class="text-center">Moment Yang Berharga</h1>
+                    <div class="quotes text-center "data-aos="fade-up"
+                    data-aos-duration="3000">
+                        <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak / Ibu / Saudara / i. berkenan hadir untuk memberikan do'a restunya kami ucapkan terimakasih.</p>
+                    </div>
+                </div>
+                <footer class="text-center bg-light p-3">
+                    <ul class="mt-1">
+                        <li><a href="https://instagram.com/rahmad_qolbii?igshid=YmMyMTA2M2Y="><img src="https://img.icons8.com/stickers/34/000000/instagram-new--v2.png"/>@rahmad_qolbii</a></li>
+                    
+                    </ul>
+                </footer>
+            </div>
+           
+        </div>
+        
+        
+           
+            
+  
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 </body>
-
 </html>
